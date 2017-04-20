@@ -1,0 +1,29 @@
+<view class="tip">
+  零件的内部和外部的棱角，当图样上未注明要求时，制成45°倒角或倒圆。
+</view>
+<image src="../../../../imgs/Edge.gif" mode="widthFix"></image>
+
+<!--零件内部和外部的棱角-->
+<view class="item-container">
+  <view class="title h1">零件内部和外部的棱角</view>
+  <view class="bd_gray">
+    <view class="result">
+      直径d、厚度δ、台阶高度b：≤3
+    </view>
+    <view class="result">
+      倒角或倒圆范围：0.1～0.3
+    </view>
+  </view>
+  <view class="bd_gray">
+    <view class="result">
+      直径d、厚度δ、台阶高度b：>3
+    </view>
+    <view class="result">
+      倒角或倒圆范围：0.1～0.5
+    </view>
+  </view>
+  <view class="tip">
+    注：倒角或倒圆范围应按有关的较小尺寸确定。
+  </view>
+</view>
+<include src="../../../footer/footer.wxml" />

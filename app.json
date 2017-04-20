@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cuttingpiece/liner/HoleAxisLength/HoleAxisLength",
+    "pages/cuttingpiece/liner/HoleAndScrewDepth/HoleAndScrewDepth",
+    "pages/cuttingpiece/liner/CornorChamAndAngle/CornorChamAndAngle",
+    "pages/cuttingpiece/liner/RadiusR/RadiusR",
+    "pages/cuttingpiece/liner/Edges/Edges",
+    "pages/cuttingpiece/angle/Angle",
+    "pages/cuttingpiece/shapePosition/StraightnessAndFlatness/StraightnessAndFlatness",
+    "pages/cuttingpiece/shapePosition/Roundness/Roundness",
+    "pages/cuttingpiece/shapePosition/Cylindricity/Cylindricity",
+    "pages/cuttingpiece/shapePosition/Parallelism/Parallelism",
+    "pages/cuttingpiece/shapePosition/VerticalnessAndInclination/VerticalnessAndInclination",
+    "pages/cuttingpiece/shapePosition/Concentricity/Concentricity",
+    "pages/cuttingpiece/shapePosition/RadialRunoutAndSymmetry/RadialRunoutAndSymmetry"
+  ],
+  "window": {
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "HB5800-1999 一般公差",
+    "navigationBarTextStyle": "white"
+  }
+}

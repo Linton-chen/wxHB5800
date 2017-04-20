@@ -1,0 +1,80 @@
+/* pages/cuttingpiece/liner/HoleAxisLength/HoleAxisLength.wxss */
+
+.tip {
+  color: #888;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  font-family: "微软雅黑";
+  padding: 0 10px;
+}
+
+.form-item {
+  transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: #fcfcfc;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+  border-radius: 2px;
+  margin: 5px 10px;
+  padding: 5px;
+}
+
+.title {
+  margin: 10px 15px;
+  font-weight: bold;
+}
+
+.h1 {
+  font-size: 16px;
+}
+
+.h2 {
+  font-size: 14px;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 2px 10px;
+  font-family: 'Times New Roman', '宋体', serif;
+}
+
+.submit {
+  width: 40%;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px auto;
+}
+
+.ToleranceType {
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  font-family: "宋体";
+}
+
+.ToleranceLevel {
+  width: 30%;
+  height: 30px;
+  line-height: 30px;
+  font-family: "宋体";
+}
+
+.result {
+  padding-left: 15px;
+  margin: 2px auto;
+}
+
+
+.b{
+  border: 1px solid red;
+}

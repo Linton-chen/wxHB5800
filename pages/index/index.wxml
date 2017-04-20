@@ -1,0 +1,124 @@
+<view class="title-container center">
+  <text class="title">HB5800-1999</text>
+  <text class="title">一般公差</text>
+</view>
+
+<!--前言-->
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">前言</view>
+      <button class="check_btn" bindtap="togglePrefaceShowStatus" type="{{PrefaceContentShow?'warn':'primary'}}">{{PrefaceContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!PrefaceContentShow}}" class="{{PrefaceContentShow?'show':''}}">
+    <view class="content">
+      <view class="p" wx:for="{{PrefaceContent}}">{{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--1 范围-->
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">1 范围</view>
+      <button class="check_btn" bindtap="toggleScopeShowStatus" type="{{ScopeContentShow?'warn':'primary'}}">{{ScopeContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!ScopeContentShow}}" class="{{ScopeContentShow?'show':''}}">
+    <view class="content">
+      <view class="p" wx:for="{{ScopeContent}}">{{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--2 引用标准-->
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">2 引用标准</view>
+      <button class="check_btn" bindtap="toggleRefStandardShowStatus" type="{{RefStandardContentShow?'warn':'primary'}}">{{RefStandardContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!RefStandardContentShow}}" class="{{RefStandardContentShow?'show':''}}" style="height:150px;">
+    <view class="content">
+      <view class="p" wx:for="{{RefStandardContent}}">{{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--3 定义-->
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">3 定义</view>
+      <button class="check_btn" bindtap="toggleDefinitionShowStatus" type="{{DefinitionContentShow?'warn':'primary'}}">{{DefinitionContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!DefinitionContentShow}}" class="{{DefinitionContentShow?'show':''}}" style="height:100px;">
+    <view class="content">
+      <view class="p" wx:for="{{DefinitionContent}}">{{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+<!--4 总则-->
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">4 总则</view>
+      <button class="check_btn" bindtap="toggleGeneralPrincipleShowStatus" type="{{GeneralPrincipleContentShow?'warn':'primary'}}">{{GeneralPrincipleContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" hidden="{{!GeneralPrincipleContentShow}}" class="{{GeneralPrincipleContentShow?'show':''}}">
+    <view class="content">
+      <block wx:for="{{GeneralPrincipleContent}}">
+        <view class="h3">{{item.title}}</view>
+        <view class="p">{{item.content}}</view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+
+<!--5 切削加工件-->
+<view class="item-container">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">5 切削加工件</view>
+      <button class="check_btn" bindtap="toggleCuttingPieceContentShowStatus" type="{{CuttingPieceContentShow?'warn':'primary'}}">{{CuttingPieceContentShow?"隐藏":"查看"}}</button>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" scroll-x="false" style="height:500px;" hidden="{{!CuttingPieceContentShow}}" class="{{CuttingPieceContentShow?'show':''}}">
+    <view class="content">
+
+      <!--5.1 线性尺寸公差-->
+      <view class="h3">5.1 线性尺寸公差</view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{LinerIndex}}">
+          <view class="weui-cell__bd">{{item.title}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">查询</view>
+        </navigator>
+      </view>
+
+      <!--5.2 角度尺寸-->
+      <view class="h3">5.2 角度尺寸公差</view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="/pages/cuttingpiece/angle/Angle" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd">角度尺寸公差</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">查询</view>
+        </navigator>
+      </view>
+
+      <!--5.3 形状及位置-->
+      <view class="h3">5.3 形状及位置公差</view>
+      <view class="weui-cells weui-cells_after-title">
+        <navigator url="{{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{PosShapeIndex}}">
+          <view class="weui-cell__bd">{{item.title}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">查询</view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<include src="../footer/footer.wxml" />

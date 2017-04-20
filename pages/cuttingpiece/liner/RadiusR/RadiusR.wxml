@@ -1,0 +1,44 @@
+<swiper indicator-dots="true" autoplay="true" circular="true">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="tip">
+  注：1.非转接半径系指图样上直接标注定位尺寸并作为特定结构用的半径（图1、图2）。2.当宽度A为双向偏差时，相切半径R（图2）的极限偏差按公差值之半冠以正负号，连接处应圆滑过渡。
+</view>
+
+<!--非转接半径R-->
+<view class="item-container">
+  <view class="title h1">非转接半径R</view>
+  <picker-view indicator-style="height: 35px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="selectedChange">
+    <picker-view-column>
+      <view wx:for="{{RadiusRData}}" style="line-height: 35px;margin-left:20px;">{{item.text}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--查询结果-->
+<view class="item-container">
+  <view class="title h1" style="color:blue;">非转接半径R(mm)：{{ RadiusRResult.text}}</view>
+  <view class="result h3">
+    凹R极限偏差(mm)
+  </view>
+  <view class="result">
+    上偏差：：{{ RadiusRResult.value.concaveR[0]}}
+  </view>
+  <view class="result">
+    下偏差：：{{ RadiusRResult.value.concaveR[1]}}
+  </view>
+  <view class="result h3">
+    凸R极限偏差(mm)
+  </view>
+  <view class="result">
+    上偏差：：{{ RadiusRResult.value.onvexR[0]}}
+  </view>
+  <view class="result">
+    下偏差：：{{ RadiusRResult.value.onvexR[1]}}
+  </view>
+</view>
+<include src="../../../footer/footer.wxml" />

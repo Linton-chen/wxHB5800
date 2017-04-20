@@ -1,0 +1,4 @@
+<view class="tip">
+  垂直度、倾斜度公差不作单独规定，由平面度（直线度）公差及角度尺寸公差分别控制。
+</view>
+<include src="../../../footer/footer.wxml" />

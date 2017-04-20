@@ -1,0 +1,59 @@
+<image src="../../../../imgs/HoleAxisLength.gif" mode="widthFix"></image>
+<view class="tip">
+  注：用钻头钻的孔，允许有等于孔公差之半的负偏差。
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="form-item">
+    <view class="title h1">基本尺寸</view>
+    <input type="digit" bindinput="dimInput" auto-focus />
+    <view class="wrapper">
+      <button formType="submit" class="submit" type="primary">查 询</button>
+      <button formType="reset" class="submit" type="default">清空</button>
+    </view>
+  </view>
+  <view class="form-item" wx:if="{{result != undefined}}">
+    <view class="title h1" style="color:blue;">查询结果</view>
+    <view class="result">
+      基本尺寸：{{ basicDim}}
+    </view>
+    <view class="result">
+      公差类型：{{ ToleranceType == 'D'?"孔D":(ToleranceType == 'd'?"轴d":(ToleranceType == 'L'?"长度L":"无...")) }}
+    </view>
+    <block wx:if="{{ToleranceType != 'L'}}">
+      <view class="result" wx:if="{{ToleranceType != 'L'}}">
+        公差等级：{{ ToleranceLevel}}
+      </view>
+      <view class="result">
+        上公差：{{ result.upper}}
+      </view>
+      <view class="result">
+        下公差：{{ result.lower}}
+      </view>
+    </block>
+    <view wx:else class="result">
+      长度公差：±{{result}}
+    </view>
+  </view>
+  <view class="form-item">
+    <view class="title h2">选择公差类型（孔、轴、长度）</view>
+    <view class="wrapper">
+      <button class="ToleranceType" type="{{ToleranceType == 'D' ? 'warn': 'default'}}" bindtap="selectToleranceTypeHole">
+        孔D
+      </button>
+      <button class="ToleranceType" type="{{ToleranceType == 'd' ? 'warn': 'default'}}" bindtap="selectToleranceTypeAxis">
+        轴d
+      </button>
+      <button class="ToleranceType" type="{{ToleranceType == 'L' ? 'warn': 'default'}}" bindtap="selectToleranceTypeLength">
+        长度L
+      </button>
+    </view>
+  </view>
+  <view class="form-item" hidden="{{ ToleranceType == 'L' }}">
+    <view class="title h2">选择公差等级（I、II）</view>
+    <view class="wrapper">
+      <button class="ToleranceLevel" type="{{ToleranceLevel == 'I' ? 'warn': 'default'}}" bindtap="selectToleranceLevelI">I</button>
+      <button class="ToleranceLevel" type="{{ToleranceLevel == 'II' ? 'warn': 'default'}}" bindtap="selectToleranceLevelII">II</button>
+    </view>
+  </view>
+</form>
+<include src="../../../footer/footer.wxml" />

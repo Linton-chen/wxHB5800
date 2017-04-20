@@ -1,0 +1,148 @@
+.title-container {
+  margin: 20px 0;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "微软雅黑";
+  display: block;
+  margin: 5px 0;
+}
+
+.item-container {
+  margin: 3px 0;
+}
+
+.check_btn {
+  text-align: right;
+  color: #000;
+  line-height: 1.41176471;
+  margin: 0;
+}
+
+scroll-view {
+  height: 300px;
+  background-color: #fafafa;
+}
+
+.show {
+  animation: showAnimation 0.3s ease;
+}
+
+.content {
+  margin: 20px;
+}
+
+
+navigator{
+  font-size: 14px;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.b {
+  border: 1px solid red;
+}
+
+/* weui wxss*/
+
+.weui-cells {
+  position: relative;
+  /*margin-top: 1.17647059em;*/
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px;
+}
+
+.weui-cells:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.weui-cells:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+}
+
+.weui-cell {
+  padding: 10px 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cell:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+  left: 15px;
+}
+
+.weui-cell__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-family: 'Times New Roman', "宋体", serif;
+}
+
+.weui-cell__ft_in-access {
+  padding-right: 13px;
+  position: relative;
+}
+.weui-cell__ft_in-access:after {
+  content: " ";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  border-width: 2px 2px 0 0;
+  border-color: #C8C8CD;
+  border-style: solid;
+  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: relative;
+  top: -2px;
+  top: 50%;
+  margin-top: -4px;
+  right: 2px;
+}
+
+.weui-cell_active {
+  background-color: #eee;
+}
+
+
+
+/* animation */
+@keyframes showAnimation {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}

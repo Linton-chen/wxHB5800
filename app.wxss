@@ -1,0 +1,40 @@
+/**app.wxss**/
+
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+view .h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "微软雅黑";
+}
+
+view .p {
+  color: black;
+  font-size: 16px;
+  line-height: 25px;
+  margin: 5rpx auto;
+  text-indent: 2em;
+  font-family: "宋体";
+}
+
+image {
+  width: 100%;
+}
+
+.weui-footer {
+  color: #999999;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+ 
+.weui-footer__text {
+  padding: 0 .34em;
+  font-size: 12px;
+}

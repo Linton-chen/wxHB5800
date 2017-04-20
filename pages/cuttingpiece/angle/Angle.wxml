@@ -1,0 +1,29 @@
+<image src="../../../imgs/Angle.gif" mode="widthFix"></image>
+<view class="tip">
+  角度α（如上图，包括未标注的90°和等边多边形的角度）的极限公差按下表规定。当构成角度的短边为未给出尺寸的虚边（上图d）时，则按实际存在的边长确定。
+</view>
+
+<!--零件内部和外部的棱角-->
+<view class="item-container">
+  <view class="title h1">锥体母线、角度短边长L(mm)</view>
+  <picker-view indicator-style="height: 35px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="selectedChange">
+    <picker-view-column>
+      <view wx:for="{{AngleData}}" style="line-height: 35px;margin-left:20px;">{{item.text}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--查询结果-->
+<view class="item-container">
+  <view class="title h1" style="color:blue;">极限偏差查询结果</view>
+  <view class="result">
+    锥体母线、角度短边长L(mm)：{{ AngleResult.text}}
+  </view>
+  <view class="result">
+    极限偏差角度值：{{ AngleResult.angleTol}}
+  </view>
+  <view class="result">
+    极限偏差线性值(mm)：{{ AngleResult.linerTol}}
+  </view>
+</view>
+<include src="../../footer/footer.wxml" />

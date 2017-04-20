@@ -1,0 +1,12 @@
+/* pages/cuttingpiece/shapePosition/VerticalnessAndInclination/VerticalnessAndInclination.wxss */
+
+.tip {
+  color: #888;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  font-family: "微软雅黑";
+  padding: 0 10px;
+}

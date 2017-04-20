@@ -1,0 +1,4 @@
+<view class="tip">
+  圆柱度公差不作单独规定，由圆度、素线的直线度公差及圆柱面的极限尺寸分别控制。
+</view>
+<include src="../../../footer/footer.wxml" />

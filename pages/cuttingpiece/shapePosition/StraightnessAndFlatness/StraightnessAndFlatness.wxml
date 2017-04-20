@@ -1,0 +1,33 @@
+<image src="../../../../imgs/StraightnessAndFlatness.gif" mode="widthFix">
+</image>
+<view class="tip">
+  注：下表中基本尺寸L，对直线度公差系指被测要素的长度尺寸，对平面度公差系指被测平面轮廓的较大尺寸（上图）。
+</view>
+
+<!--直线度和平面度公差-->
+<view class="item-container">
+  <view class="title h1">基本尺寸L(mm)</view>
+  <picker-view indicator-style="height: 35px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="selectedChange">
+    <picker-view-column>
+      <view wx:for="{{StraightnessAndFlatnessData}}" style="line-height: 35px;margin-left:20px;">{{item.text}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--查询结果-->
+<view class="item-container">
+  <view class="title h1" style="color:blue;">直线度和平面度公差查询结果</view>
+   <view class="result">
+    基本尺寸L(mm)：{{ StraightnessAndFlatnessResult.text}}
+  </view>
+  <view class="result h3">
+    被测要素表面粗糙度
+  </view>
+  <view class="result">
+    Ra≤1.6：{{ StraightnessAndFlatnessResult.le1_6}}
+  </view>
+  <view class="result">
+    Ra>1.6：{{ StraightnessAndFlatnessResult.gt1_6}}
+  </view>
+</view>
+<include src="../../../footer/footer.wxml" />

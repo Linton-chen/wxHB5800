@@ -1,0 +1,40 @@
+<view class="tip">
+  径向圆跳动及对称度公差按下表查询
+</view>
+
+<!--圆度公差-->
+<view class="item-container">
+  <view class="title h1">被测直径（或宽度）(mm)</view>
+  <picker-view indicator-style="height: 35px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="selectedChange">
+    <picker-view-column>
+      <view wx:for="{{RadialRunoutAndSymmetryData}}" style="line-height: 35px;margin-left:20px;">{{item.text}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--查询结果-->
+<view class="item-container">
+  <view class="title h1" style="color:blue;">查询结果</view>
+  <view class="result">
+    被测直径（或宽度）(mm)：{{ RadialRunoutAndSymmetryResult.text}}
+  </view>
+  <view class="result">
+    公差(mm)：{{ RadialRunoutAndSymmetryResult.tol}}
+  </view>
+</view>
+<view class="item-container">
+  <view class="result h3">径向圆跳动公差</view>
+  <view class="result p">
+    径向圆跳动应以轴径、有足够长度的高精度表面、较长的圆柱面之顺序确定基准；若两者长度相同时，可任选一个作基准（其中一个合格即为合格）。
+  </view>
+  <view class="result p">
+    当中心孔足以代表轴径或其它高精度表面所构成的公共轴线时，可优先作为基准。
+  </view>
+</view>
+<view class="item-container">
+  <view class="result h3">对称度公差</view>
+  <view class="result p">
+    对称度应以对称要素中较长的相关要素作基准；若两者长度相同时，可任选一个作基准（其中一个合格即为合格）。
+  </view>
+</view>
+<include src="../../../footer/footer.wxml" />

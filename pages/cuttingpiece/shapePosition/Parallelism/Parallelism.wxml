@@ -1,0 +1,9 @@
+<view class="tip">
+  平行度公差不作单独规定，由平面度（直线度）公差值及平行要素间的极限尺寸分别控制。
+</view>
+<image src="../../../../imgs/Parallelism.gif" mode="widthFix">
+</image>
+<view class="tip">
+  台阶表面（上图）的平行度公差等于平行要素间的尺寸公差值并以较长要素作基准；若两者长度相同时，可任选一个作基准（其中一个合格即为合格）。
+</view>
+<include src="../../../footer/footer.wxml" />

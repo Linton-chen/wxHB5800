@@ -1,0 +1,30 @@
+<image src="../../../../imgs/Roundness.gif" mode="widthFix">
+</image>
+<view class="tip">
+  圆度公差等于该圆的尺寸公差值（上图），但当该圆的尺寸公差大于IT11时，其圆度公差按IT11(下表)规定。
+</view>
+
+<!--圆度公差-->
+<view class="item-container">
+  <view class="title h1">基本尺寸(mm)</view>
+  <picker-view indicator-style="height: 35px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="selectedChange">
+    <picker-view-column>
+      <view wx:for="{{RoundnessData}}" style="line-height: 35px;margin-left:20px;">{{item.text}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--查询结果-->
+<view class="item-container">
+  <view class="title h1" style="color:blue;">圆度公差查询结果</view>
+   <view class="result">
+    基本尺寸(mm)：{{ RoundnessResult.text}}
+  </view>
+  <view class="result">
+    公差(mm)：{{ RoundnessResult.tol}}
+  </view>
+</view>
+<view class="tip">
+  对加工后易变形而在装配时能重新恢复正确几何形状的圆柱面，其圆度公差不作规定。在自由状态下，实际尺寸允许超出极限尺寸，但同一剖面内的最大和最小实际尺寸的算术平均值应在该圆柱面的极限尺寸范围内。
+</view>
+<include src="../../../footer/footer.wxml" />

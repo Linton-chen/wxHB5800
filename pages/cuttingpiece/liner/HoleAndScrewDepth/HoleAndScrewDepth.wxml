@@ -1,0 +1,46 @@
+<image src="../../../../imgs/HoleAndScrewDepth.gif" mode="widthFix"></image>
+
+<!--钻孔深度L1-->
+<view class="item-container">
+  <view class="title h1">钻孔深度L1</view>
+  <view class="wrapper">
+    <button class="submit" type="primary" bindtap="showHoleLengthActionSheet">选择钻孔深度L1</button>
+  </view>
+</view>
+
+<!--查询结果-->
+<view class="item-container" hidden="{{!HoleLengthResult}}">
+  <view class="title h1" style="color:blue;">钻孔深度查询结果</view>
+  <view class="result">
+    钻孔深度L1：{{ HoleLengthResult.text}}
+  </view>
+  <view class="result">
+    深度极限上偏差：{{ HoleLengthResult.value.upper}}
+  </view>
+  <view class="result">
+    深度极限下偏差：{{ HoleLengthResult.value.lower}}
+  </view>
+</view>
+
+<!--螺纹深度L2-->
+<view class="item-container">
+  <view class="title h1">螺纹深度L2</view>
+  <view class="wrapper">
+    <button class="submit" type="primary" bindtap="showScrewLengthActionSheet">选择螺距</button>
+  </view>
+</view>
+
+<!--查询结果-->
+<view class="item-container" hidden="{{!ScrewLengthResult}}">
+  <view class="title h1" style="color:blue;">螺纹深度查询结果</view>
+  <view class="result">
+    螺   距：{{ ScrewLengthResult.text}}
+  </view>
+  <view class="result">
+    螺纹长度L2极限上偏差：{{ ScrewLengthResult.value.upper}}
+  </view>
+  <view class="result">
+    螺纹长度L2极限下偏差：{{ ScrewLengthResult.value.lower}}
+  </view>
+</view>
+<include src="../../../footer/footer.wxml" />

@@ -1,0 +1,30 @@
+<image src="../../../../imgs/CornorChamAndAngle.gif" mode="widthFix">
+</image>
+<view class="tip">
+  注：转接半径系指图样中未标注定位尺寸并作为表面间连接过渡用的半径。
+</view>
+
+<!--转接半径r和倒角L3及其角度45°-->
+<view class="item-container">
+  <view class="title h1">选择转接半径r或倒角L3</view>
+  <picker-view indicator-style="height: 35px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="selectedChange">
+    <picker-view-column>
+      <view wx:for="{{CornorChamData}}" style="line-height: 35px;margin-left:20px;">{{item.text}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<!--查询结果-->
+<view class="item-container">
+  <view class="title h1" style="color:blue;">转接半径r或倒角L3</view>
+  <view class="result">
+    转接半径r或倒角L3：{{ CornorChamResult.text}}
+  </view>
+  <view class="result">
+    r或L3极限偏差(mm)：{{ CornorChamResult.value}}
+  </view>
+  <view class="result">
+    45°角的极限偏差：{{ CornorChamResult.angleTol}}
+  </view>
+</view>
+<include src="../../../footer/footer.wxml" />
